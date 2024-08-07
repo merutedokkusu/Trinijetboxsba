@@ -4,137 +4,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trini JetBox</title>
-  <link rel="icon" type="image/x-icon" href="website icon.png">
+  <link rel="icon" type="image/x-icon" href="website-icon.png">
   <style>
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .sisnhf{
+text-align: left;
     }
-
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
       color: #333;
-      text-align: center;
+      line-height: 1.6;
     }
 
-
     .topnav {
-      overflow: hidden;
-      background-color: #333;
-
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #004080;
+      padding: 15px 30px;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 20px;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
+      padding: 0 15px;
     }
 
     .topnav a:hover {
-      background-color: #ddd;
-      color: black;
+      text-decoration: underline;
     }
 
     .topnav .logo {
-      float: right;
-      font-size: 1.2em;
-      color: #f2f2f2;
-      padding: 14px 20px;
-      font-weight: bold;
+      font-size: 1.8em;
       text-transform: uppercase;
     }
 
+    .topnav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-    h1 {
-      margin: 30px 0;
+    .topnav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #003366;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .topnav .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
+      margin-top: 70px; /* Adjust for fixed topnav */
+      padding: 60px 30px;
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
       font-size: 2.5em;
-      color: #444;
+      font-weight: 700;
     }
 
-
-    .fade-in-image {
-      animation: fadeIn 1s ease-out;
-      margin: 20px 0;
-    }
-
-    .fade-in-image img {
-      max-width: 100%;
-      height: auto;
-    }
-
-
-    .button-64 {
-      display: inline-flex;
-      align-items: center;
-      background-image: linear-gradient(144deg, #e0f6ff, #a99afe, #6792e4);
-      border: none;
-      border-radius: 8px;
-      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-      color: #fff;
-      font-family: 'Phantom Sans', sans-serif;
-      font-size: 20px;
-      padding: 12px 24px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .button-64:hover {
-      background-image: linear-gradient(144deg, #a99afe, #6792e4, #e0f6ff);
-    }
-    .topnav .SignUp {
-      float: right;
-      font-size: 1.2em;
-      color: #f2f2f2;
-      padding: 14px 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    .button2 {
-      background-color: #6667A0;
-      border: none;
-      border-radius: 6px;
-      color: #fff;
-      font-family: Helvetica, sans-serif;
-      font-size: 18px;
-      padding: 12px 24px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-    .greytext {
-      font-style: italic ;
-      color:#444 ;
-    }
-    .button2 a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .button2:hover {
-      background-color: #4d4f8c;
-    }
-
-
-    .brand-logos {
+    section {
+      padding: 40px 30px;
       margin: 20px auto;
-      max-width: 800px;
-      justify-content: center;
+      max-width: 1200px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
+    section h2 {
+      font-size: 2em;
+      color: #004080;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
 
     .brand-logos img {
-      margin: 10px;
-      max-width: 120px;
+      max-width: 150px;
       height: auto;
+      margin: 10px;
+      border-radius: 4px;
+    }
+
+    .button-primary {
+      background-color: #004080;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 24px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-primary:hover {
+      background-color: #003366;
+    }
+
+    .contact-form, .newsletter-signup {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input, .contact-form textarea, .newsletter-signup input[type="email"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .contact-form button, .newsletter-signup button {
+      background-color: #004080;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 24px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover, .newsletter-signup button:hover {
+      background-color: #003366;
+    }
+
+    .testimonials {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    .testimonial-item {
+      margin-bottom: 20px;
+    }
+
+    .testimonial-item p {
+      font-style: italic;
     }
 
   
@@ -154,12 +196,38 @@
     .footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .topnav a {
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      .contact-form, .newsletter-signup {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="topnav">
     <a href="index.html">Home</a>
-    <a href="#">About</a>
+    <div class="dropdown">
+      <a href="#">About</a>
+      <div class="dropdown-content">
+        <a href="#">Company</a>
+        <a href="#">Team</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
     <a href="services.html">Freight Charges</a>
     <a href="sign in.html" class="SignUp">Sign Up</a>
     <a class="logo" href="index.html">Trini JetBox</a>
@@ -169,38 +237,64 @@
     <h1>Welcome to Trini JetBox</h1>
   </header>
 
-  <div class="fade-in-image">
-    <img src="trinijetbox3.png" alt="Trini JetBox">
-  </div>
-
   <section>
-    <h1>About Us</h1>
+    <h2>About Us</h2>
     <p>
-      At Trini JetBox, we specialize in providing top-tier logistics and delivery solutions tailored to your needs. <br>With our strategically positioned shipment hub in Miami, we ensure that your products from renowned brands are efficiently processed and delivered to Trinidad. <br>Our team is dedicated to handling your shipments with the utmost care and precision.
+      At Trini JetBox, we specialize in providing premier logistics and delivery solutions tailored to meet your business needs. With our strategically positioned shipment hub in Miami, we ensure efficient processing and delivery of your products to Trinidad.<br>
+      Our dedicated team leverages advanced technology to keep you informed throughout the entire delivery process, ensuring precision and reliability in every shipment.
     </p>
     <p>
-      Our comprehensive service includes tracking your shipments from the moment they arrive at our Miami facility until they reach your doorstep in Trinidad. <br>We leverage advanced technology to keep you informed at every stage of the delivery process. <br>Should you encounter any issues or have any inquiries, our responsive customer support team is always available to assist you.
+      We are committed to offering exceptional customer support and a seamless shipping experience. Whether you have questions or need assistance, our team is here to provide prompt and professional service.
     </p>
     
     <div class="brand-logos">
-      <img src="Amazon-logo.png" alt="Amazon">
-      <img src="ebay-logo-png-transparent.png" alt="eBay">
-      <img src="R.png" alt="R">
-      <img src="gucci-vector.png" alt="Gucci">
-      <img src="shein-logo-0.png" alt="Shein">
+      <img src="Amazon-logo.png" alt="Amazon logo">
+      <img src="ebay-logo-png-transparent.png" alt="eBay logo">
+      <img src="R.png" alt="R logo">
+      <img src="gucci-vector.png" alt="Gucci logo">
+      <img src="shein-logo-0.png" alt="Shein logo">
     </div>
 
     <p>
-      For any questions or to request further information, please do not hesitate to contact us via email.<br> We look forward to serving you and ensuring that your shopping experience is seamless and satisfactory.
+      For inquiries or additional information, please contact us via email. We look forward to delivering an outstanding service experience.
     </p>
 
-    <button class="button2"><a href="mailto:info@trinijetbox.com">Email Us</a></button>
+    <a class="button-primary" href="mailto:info@trinijetbox.com">Email Us</a>
   </section>
-  <img src="yess.png" alt="fallen">
+
+  <section class="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-item">
+      <p>"Trini JetBox has significantly streamlined our logistics operations. Their reliability and professionalism are unmatched."</p>
+      <p>- Jane Doe, Operations Manager</p>
+    </div>
+    <div class="testimonial-item">
+      <p>"We trust Trini JetBox for all our shipping needs. Their service is consistently excellent and dependable."</p>
+      <p>- John Smith, Purchasing Director</p>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="newsletter-signup">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form action="#" method="post">
+      <input type="email" name="newsletter-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+  <img src="yess.png" alt="fallen" class="sisnhf">
   <footer class="footer">
     <p>Stay connected with us for updates and promotions. Follow us on <a href="https://x.com/TriniJetBoxSBA">Twitter</a>!</p>
 <p class="greytext">Copyright 2024 ©. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

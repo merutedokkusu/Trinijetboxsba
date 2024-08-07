@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trini JetBox</title>
+  <link rel="icon" type="image/x-icon" href="website icon.png">
+  <style>
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav .logo {
+      float: right;
+      font-size: 1.2em;
+      color: #f2f2f2;
+      padding: 14px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+
+    h1 {
+      margin: 30px 0;
+      font-size: 2.5em;
+      color: #444;
+    }
+
+
+    .fade-in-image {
+      animation: fadeIn 1s ease-out;
+      margin: 20px 0;
+    }
+
+    .fade-in-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    .button-64 {
+      display: inline-flex;
+      align-items: center;
+      background-image: linear-gradient(144deg, #e0f6ff, #a99afe, #6792e4);
+      border: none;
+      border-radius: 8px;
+      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+      color: #fff;
+      font-family: 'Phantom Sans', sans-serif;
+      font-size: 20px;
+      padding: 12px 24px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button-64:hover {
+      background-image: linear-gradient(144deg, #a99afe, #6792e4, #e0f6ff);
+    }
+    .topnav .SignUp {
+      float: right;
+      font-size: 1.2em;
+      color: #f2f2f2;
+      padding: 14px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .button2 {
+      background-color: #6667A0;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-family: Helvetica, sans-serif;
+      font-size: 18px;
+      padding: 12px 24px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .greytext {
+      font-style: italic ;
+      color:#444 ;
+    }
+    .button2 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .button2:hover {
+      background-color: #4d4f8c;
+    }
+
+
+    .brand-logos {
+      margin: 20px auto;
+      max-width: 800px;
+      justify-content: center;
+
+    }
+
+    .brand-logos img {
+      margin: 10px;
+      max-width: 120px;
+      height: auto;
+    }
+
+  
+    .footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="#">About</a>
+    <a href="services.html">Freight Charges</a>
+    <a href="sign in.html" class="SignUp">Sign Up</a>
+    <a class="logo" href="index.html">Trini JetBox</a>
+  </div>
+
+  <header>
+    <h1>Welcome to Trini JetBox</h1>
+  </header>
+
+  <div class="fade-in-image">
+    <img src="trinijetbox3.png" alt="Trini JetBox">
+  </div>
+
+  <section>
+    <h1>About Us</h1>
+    <p>
+      At Trini JetBox, we specialize in providing top-tier logistics and delivery solutions tailored to your needs. <br>With our strategically positioned shipment hub in Miami, we ensure that your products from renowned brands are efficiently processed and delivered to Trinidad. <br>Our team is dedicated to handling your shipments with the utmost care and precision.
+    </p>
+    <p>
+      Our comprehensive service includes tracking your shipments from the moment they arrive at our Miami facility until they reach your doorstep in Trinidad. <br>We leverage advanced technology to keep you informed at every stage of the delivery process. <br>Should you encounter any issues or have any inquiries, our responsive customer support team is always available to assist you.
+    </p>
+    
+    <div class="brand-logos">
+      <img src="Amazon-logo.png" alt="Amazon">
+      <img src="ebay-logo-png-transparent.png" alt="eBay">
+      <img src="R.png" alt="R">
+      <img src="gucci-vector.png" alt="Gucci">
+      <img src="shein-logo-0.png" alt="Shein">
+    </div>
+
+    <p>
+      For any questions or to request further information, please do not hesitate to contact us via email.<br> We look forward to serving you and ensuring that your shopping experience is seamless and satisfactory.
+    </p>
+
+    <button class="button2"><a href="mailto:info@trinijetbox.com">Email Us</a></button>
+  </section>
+  <img src="yess.png" alt="fallen">
+  <footer class="footer">
+    <p>Stay connected with us for updates and promotions. Follow us on <a href="https://x.com/TriniJetBoxSBA">Twitter</a>!</p>
+<p class="greytext">Copyright 2024 ©. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
