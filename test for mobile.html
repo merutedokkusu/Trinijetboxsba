@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,6 @@
   <title>Trini JetBox</title>
   <link rel="icon" type="image/x-icon" href="website icon.png">
   <style>
-    .lolo{padding: 12px; padding-left:200px ;}
-    .sisnhf{
-text-align: left;
-    }
     body {
       font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
       margin: 0;
@@ -24,7 +21,7 @@ text-align: left;
       justify-content: space-between;
       align-items: center;
       background-color: #004080;
-      padding: 15px 30px;
+      padding: 15px 10px;
       color: #fff;
       position: fixed;
       width: 100%;
@@ -37,7 +34,7 @@ text-align: left;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      padding: 0 15px;
+      padding: 0 10px;
     }
 
     .topnav a:hover {
@@ -45,8 +42,9 @@ text-align: left;
     }
 
     .topnav .logo {
-      font-size: 1.8em;
+      font-size: 1.5em;
       text-transform: uppercase;
+      margin: 0;
     }
 
     .topnav .dropdown {
@@ -65,7 +63,7 @@ text-align: left;
 
     .topnav .dropdown-content a {
       color: #fff;
-      padding: 12px 16px;
+      padding: 10px 16px;
       text-decoration: none;
       display: block;
       text-align: left;
@@ -77,7 +75,7 @@ text-align: left;
 
     header {
       margin-top: 70px; 
-      padding: 60px 30px;
+      padding: 40px 20px;
       background-color: #003366;
       color: #fff;
       text-align: center;
@@ -85,30 +83,36 @@ text-align: left;
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2em;
       font-weight: 700;
     }
 
     section {
-      padding: 40px 30px;
+      padding: 20px;
       margin: 20px auto;
-      max-width: 1200px;
+      max-width: 90%;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     section h2 {
-      font-size: 2em;
+      font-size: 1.5em;
       color: #004080;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       font-weight: 700;
     }
 
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .brand-logos img {
-      max-width: 150px;
+      max-width: 100px;
       height: auto;
-      margin: 10px;
+      margin: 5px;
       border-radius: 4px;
     }
 
@@ -117,12 +121,12 @@ text-align: left;
       border: none;
       border-radius: 6px;
       color: #fff;
-      font-size: 16px;
-      padding: 12px 24px;
+      font-size: 14px;
+      padding: 10px 20px;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 15px;
       transition: background-color 0.3s ease;
     }
 
@@ -131,16 +135,16 @@ text-align: left;
     }
 
     .contact-form, .newsletter-signup {
-      max-width: 600px;
+      max-width: 100%;
       margin: 20px auto;
-      padding: 20px;
+      padding: 15px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .contact-form input, .contact-form textarea, .newsletter-signup input[type="email"] {
-      width: calc(100% - 22px);
+      width: calc(100% - 20px);
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ddd;
@@ -152,8 +156,8 @@ text-align: left;
       border: none;
       border-radius: 6px;
       color: #fff;
-      font-size: 16px;
-      padding: 12px 24px;
+      font-size: 14px;
+      padding: 10px 20px;
       cursor: pointer;
       margin-top: 10px;
       transition: background-color 0.3s ease;
@@ -165,27 +169,26 @@ text-align: left;
 
     .testimonials {
       background-color: #f9f9f9;
-      padding: 20px;
+      padding: 15px;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       margin: 20px auto;
-      max-width: 1200px;
+      max-width: 90%;
     }
 
     .testimonial-item {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .testimonial-item p {
       font-style: italic;
     }
 
-  
     .footer {
-      margin-top: 40px;
-      padding: 20px;
+      padding: 15px;
       background-color: #333;
       color: #fff;
+      text-align: center;
     }
 
     .footer a {
@@ -202,35 +205,30 @@ text-align: left;
       .topnav {
         flex-direction: column;
         padding: 10px;
+        text-align: center;
       }
       .topnav a {
-        float: none;
-        display: block;
-        text-align: left;
         padding: 10px;
       }
+      .topnav .logo {
+        margin-bottom: 10px;
+      }
+      header {
+        padding: 30px 10px;
+      }
       header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
       .contact-form, .newsletter-signup {
-        padding: 15px;
+        padding: 10px;
+      }
+      .brand-logos img {
+        max-width: 80px;
       }
     }
   </style>
 </head>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    function isMobileDevice() {
-      return /Mobi|Android/i.test(navigator.userAgent);
-    }
-
-    if (isMobileDevice()) {
-      window.location.href = 'test for mobile.html';
-    }
-  });
-</script>
 <body>
-  
   <div class="topnav">
     <a href="index.html">Home</a>
     <div class="dropdown">
@@ -243,11 +241,62 @@ text-align: left;
 
   <header>
     <h1>Welcome to Trini JetBox </h1>
-    
   </header>
 
   <section>
+    <h2>About Us</h2>
+    <p>
+      At Trini JetBox, we specialize in providing premier logistics and delivery solutions tailored to meet your business needs. With our strategically positioned shipment hub in Miami, we ensure efficient processing and delivery of your products to Trinidad.<br>
+      Our dedicated team leverages advanced technology to keep you informed throughout the entire delivery process, ensuring precision and reliability in every shipment.
+    </p>
+    <p>
+      We are committed to offering exceptional customer support and a seamless shipping experience. Whether you have questions or need assistance, our team is here to provide prompt and professional service.
+    </p>
+    <div class="brand-logos">
+      <img src="Amazon-logo.png" alt="Amazon logo">
+      <img src="ebay-logo-png-transparent.png" alt="eBay logo">
+      <img src="R.png" alt="R logo">
+      <img src="gucci-vector.png" alt="Gucci logo">
+      <img src="shein-logo-0.png" alt="Shein logo">
+    </div>
+    <p>
+      For inquiries or additional information, please contact us via email. We look forward to delivering an outstanding service experience.
+    </p>
+    <a class="button-primary" href="mailto:info@trinijetbox.com">Email Us</a>
+  </section>
 
+  <section class="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-item">
+      <p>"Trini JetBox has significantly streamlined our logistics operations. Their reliability and professionalism are unmatched."</p>
+      <p>- Jane Doe, Operations Manager</p>
+    </div>
+    <div class="testimonial-item">
+      <p>"We trust Trini JetBox for all our shipping needs. Their service is consistently excellent and dependable."</p>
+     
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="#">About</a>
+      <div class="dropdown-content">
+        <a href="#">Company</a>
+        <a href="#">Team</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+    <a href="services.html">Freight Charges</a>
+    <a href="sign in.html" class="SignUp">Sign Up</a>
+    <a class="logo" href="index.html">Trini JetBox</a>
+  </div>
+
+  <header>
+    <h1>Welcome to Trini JetBox<br><img src="trinijetbox.png" alt=""> </h1>
+  </header>
+
+  <section>
     <h2>About Us</h2>
     <p>
       At Trini JetBox, we specialize in providing premier logistics and delivery solutions tailored to meet your business needs. With our strategically positioned shipment hub in Miami, we ensure efficient processing and delivery of your products to Trinidad.<br>
@@ -301,7 +350,7 @@ text-align: left;
       <button type="submit">Subscribe</button>
     </form>
   </section>
-  <img src="yess.png" alt="fallen" class="sisnhf">    <img class="lolo" src="trinijetbox.png" alt="">
+  <img src="yess.png" alt="fallen" class="sisnhf">
   <footer class="footer">
     <p>Stay connected with us for updates and promotions. Follow us on <a href="https://x.com/TriniJetBoxSBA">Twitter</a>!</p>
 <p class="greytext">Copyright 2024 ©. All rights reserved.</p>
